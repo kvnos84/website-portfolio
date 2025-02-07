@@ -1,0 +1,996 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* Colors used
+Text Color (Raisin Black): #272727;
+Primary Color (Myrtle Green): #2A7670;
+Secondary Color (Yellow): #F1F228;
+ */
+
+ :root {
+	/* Color Palette */
+
+  /* Typography */ /* 14px */ /* 16px */ /* 24px */ /* 32px */ /* 56px */
+  
+  /* Spacing & Padding */
+
+	/* Transparency */
+}
+
+/* General body styling */
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-weight: 400;
+}
+
+/* Header container styling */
+header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Flexbox for horizontal alignment */
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; /* Space between logo and nav */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Center-align items vertically */
+    padding: 10px 20px; /* Spacing inside the header */
+    background-color: #2A7670 /* Myrtle Green background */
+}
+
+a {
+  color: #F1F228;
+  text-decoration: none;
+}
+
+/* Logo styling */
+.logo {
+    color: #fffaf3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Flexbox for proper centering */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; /* Align the logo vertically */
+}
+
+.logo img {
+    max-height: 40px; /* Restrict image height */
+    margin-right: 10px; /* Optional spacing between image and text */
+}
+
+/* Ensure the button styling works for links */
+.btn {
+  display: inline-block;
+  text-decoration: none; /* Remove underline */
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Apply sweep effect */
+.hvr-sweep-to-right {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  color: #fffaf3;
+  background-color: #2A7670; /* Default background */
+  padding: 12px 24px; /* Padding for better spacing */
+  border-radius: 5px;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+  height: 48px; /* Sets the height of the button to 48px */
+  min-width: 232px; /* Ensures the button has a minimum width of 232px */
+  line-height: 48px; /* Vertically aligns the text within the button */
+  text-align: center; /* Centers the text horizontally inside the button */
+  font-size: 1rem; /* Sets the font size of the button text */
+  color: #fffaf3; /* Sets the text color to white */
+  background-color: #2A7670;
+  ; /* Default background color of the button */
+  border: none; /* Removes any default border from the button */
+}
+
+.hvr-sweep-to-right:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #272727; /* Hover background color */
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+      -ms-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.hvr-sweep-to-right:hover {
+  color: #fffaf3 /* Ensure text remains visible */
+}
+
+.hvr-sweep-to-right:focus {
+  color: #fffaf3 /* Ensure text remains visible */
+}
+
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before {
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1); /* Expands background on hover */
+}
+
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Enable Flexbox */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px; /* Space between items */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Center items horizontally */
+  -ms-flex-line-pack: start;
+      align-content: flex-start; /* Align items to the top */
+  max-width: 1200px; /* Ensure the grid has a reasonable maximum width */
+  width: 100%; /* Allow the grid to stretch fully */
+  padding: 20px; /* Add space around the grid */
+  margin: 0 auto; /* Center the grid within the page */
+  background-color: #fffaf3 /* Optional: Add a background color */
+}
+
+.grid-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(33.33% - 20px);
+          flex: 0 1 calc(33.33% - 20px); /* Set width of each item to 1/3 minus gaps */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Include padding/borders in width */
+  background-color: #2A7670; /* Your primary color */
+  color: #fffaf3; /* Text color */
+  padding: 20px; /* Inner spacing */
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center content */
+  font-weight: 600; /* Make text bold */
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Smooth hover effect */
+}
+
+.grid-item:hover {
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px); /* Slight lift on hover */
+}
+
+/* Navigation list styling */
+nav ul {
+    list-style: none; /* Remove bullet points */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* Flexbox for horizontal list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    gap: 20px; /* Spacing between links */
+}
+
+/* Navigation link styling */
+nav ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #fffaf3; /* White text */
+    font-size: 1rem; /* Font size for links */
+    padding: 5px 10px; /* Add padding to make links clickable */
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
+    color: #F1F228; /* Yellow color on hover */
+}
+
+/* Active state */
+nav ul li a.active {
+    background-color: #272727; /* Highlight the active link background */
+    color: #F1F228; /* Dark text for contrast */
+    font-weight: 600; /* Make the active link bold */
+    border-radius: 4px; /* Optional: Add a slight rounded corner */
+}
+
+.intro-container__introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Align items in a row */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Vertically center-align the text and image */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Center horizontally, in case needed */
+  gap: 20px; /* Space between image and text */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; /* Allow the items to wrap if there is not enough space */
+  height: 100vh; /* Full height of the viewport */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* Ensure padding is included in height calculations */
+}
+
+.image-container-wrapper {
+  -ms-flex-negative: 0;
+      flex-shrink: 0; /* Prevent the image from shrinking */
+}
+
+.image-container {
+  width: 250px; /* Adjust the size of the image */
+  height: 250px; /* Ensure the image is square */
+  -o-object-fit: cover;
+     object-fit: cover; /* Crop the image if necessary */
+  border-radius: 50%; /* Make it circular (optional) */
+}
+
+.text-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; /* Allow text to take remaining space */
+}
+
+h1 {
+  margin: 0; /* Remove margin from the heading */
+  font-size: 1.5rem; /* Adjust font size */
+}
+
+p {
+  margin-top: 10px; /* Add space between the paragraph and the heading */
+  font-size: 1rem; /* Adjust font size */
+}
+
+.typewriter-container {
+  font-size: 1.5rem;
+  color: #2A7670;
+}
+
+/* Styling for the table */
+table {
+    width: 80%; /* Adjust the table width */
+    margin: 20px left; /* Left align the table */
+    border-collapse: collapse; /* Remove gaps between table borders */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    border: 1px solid #fffaf3; /* Add border to cells */
+    padding: 12px; /* Add padding inside cells */
+}
+
+td {
+    border: 1px solid #fffaf3; /* Add border to cells */
+    padding: 12px; /* Add padding inside cells */
+}
+
+th {
+    background-color: #fffaf3; /* Light gray background for headers */
+    font-weight: 600; /* Bold header text */
+}
+
+tr:nth-child(even) {
+    background-color: #fffaf3; /* Add a subtle stripe effect */
+}
+
+tr:hover {
+    background-color: #fffaf3; /* Highlight row on hover */
+}
+
+/* ---------HOME INTRO SECTION--------- */
+
+.intro-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .intro-container__avatar {
+    max-width: 45%;
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+  
+  .intro-container__introduction h1 {
+    line-height: 90px;
+    font-size: 3.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  
+  .intro-container__introduction p {
+    line-height: 40px;
+    font-size: 2rem;
+  }
+  
+  .intro-container__introduction--accent {
+    display: inline-block;
+    background-color: #272727;
+    color: #f8001d;
+    padding: 5px;
+  }
+  
+  .intro-container__introduction--link-item {
+    display: block;
+    margin-top: 15px;
+    color: undefined;
+    font-size: 1.5rem;
+  }
+  
+  .intro-container__introduction--link-item:hover,
+  .intro-container__introduction--link-item:focus {
+    text-decoration: underline;
+  }
+  
+  .intro-container__introduction--link-item:visited {
+    color: #F1F228;
+  }
+  
+  .intro-container__introduction--link-item:active {
+    color: #f8001d;
+  }
+  
+  /* Typewriter container */
+  .typewriter-container {
+    font-size: 1rem;
+    font-family: "Orbitron", sans-serif;
+    color: #2A7670;
+    font-weight: 600;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #2A7670; /* Cursor effect */
+    display: inline-block; /* Ensures text is inline */
+  }
+  
+  /* Animation for typing effect */
+  @-webkit-keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 20ch; /* Match the container width */
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 20ch; /* Match the container width */
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  /* Typewriter animation styles */
+  .typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #2A7670; /* Cursor effect */
+    -webkit-animation: typing 4s steps(20) infinite, blink 0.5s step-end infinite;
+            animation: typing 4s steps(20) infinite, blink 0.5s step-end infinite;
+  }  
+
+ /* Contact Form Styling */
+ .contact-form {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fffaf3;
+    -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #fffaf3;
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #fffaf3;
+    border-radius: 4px;
+}
+
+.contact-form input[type="submit"] {
+    background-color: #2A7670;
+    color: #fffaf3;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #272727;
+}
+
+.contact-form .cta-text {
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.contact-form .cta-text a {
+    color: #2A7670;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-form .cta-text a:hover {
+    text-decoration: none;
+}
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    position: relative;
+    -webkit-transition-property: color;
+    -o-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+       transition-duration: 0.3s;
+    height: 48px; /* Sets the height of the button to 48px */
+    min-width: 232px; /* Ensures the button has a minimum width of 232px */
+    max-width: 300px;
+    line-height: 48px; /* Vertically aligns the text within the button */
+    text-align: center; /* Centers the text horizontally inside the button */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /* Centers horizontally */
+    font-size: 1rem; /* Sets the font size of the button text */
+    color: #fffaf3; /* Sets the text color to white */
+    background-color: #2A7670; /* Default background color of the button */
+    border: none; /* Removes any default border from the button */
+    cursor: pointer; /* Changes the cursor to a pointer, indicating the button is clickable */
+  }
+  .hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #272727;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+        transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    -ms-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+       transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    -o-transition-timing-function: ease-out;
+       transition-timing-function: ease-out;
+  }
+  .hvr-sweep-to-right:hover {
+    color: #fffaf3;
+  }
+  .hvr-sweep-to-right:focus {
+    color: #fffaf3;
+  }
+  .hvr-sweep-to-right:active {
+    color: #fffaf3;
+  }
+  .hvr-sweep-to-right:hover:before, .hvr-sweep-to-right:focus:before, .hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+        transform: scaleX(1);
+}
+
+/* Error message styling */
+.error-message {
+    color: #f8001d;
+    font-size: 0.875rem;
+    display: none; /* Hide error message by default */
+}
+
+/* Show error message when input field has been interacted with */
+input:invalid:focus + .error-message,
+textarea:invalid:focus + .error-message {
+    display: block;
+}
+
+/* Show error message for required fields */
+input:required:invalid:focus + .error-message,
+textarea:required:invalid:focus + .error-message {
+    display: block;
+}
+
+/* Add a red border on invalid input fields */
+input:invalid {
+    border-color: #fffaf3;
+}
+textarea:invalid {
+    border-color: #fffaf3;
+}
+
+/* Footer styling */
+footer {
+    text-align: center; /* Center the text and images inside the footer */
+    padding: 20px; /* Add some space inside the footer */
+    background-color: #fffaf3; /* Optional: add background color */
+}
+
+footer a {
+    margin: 0 5px; /* Add space between the icons */
+}
+
+footer img {
+    width: 24px; /* Optional: adjust icon size */
+    height: 24px; /* Optional: adjust icon size */
+}
+
+@media all and (max-width: 500px) {
+  .grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+  .grid__item:last-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* 🌍 Default (Small Screens: Up to 500px) */
+@media (max-width: 500px) {
+  .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stack grid items in a single column */
+    gap: 10px;
+  }
+  
+  .grid-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%; /* Each item takes full width */
+  }
+
+  .intro-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center text */
+  }
+
+  .intro-container__avatar {
+    max-width: 70%; /* Reduce avatar size */
+    margin-right: 0; /* Remove margin */
+  }
+
+  .intro-container__introduction h1 {
+    font-size: 2rem; /* Reduce heading size */
+    line-height: 60px;
+  }
+
+  .intro-container__introduction p {
+    font-size: 1.2rem;
+  }
+
+  .contact-form {
+    width: 90%; /* Make form more narrow */
+  }
+}
+
+/* 📏 Small Tablets (501px - 750px) */
+@media (min-width: 501px) and (max-width: 750px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 15px 1fr;
+    grid-template-columns: 1fr 1fr; /* Two columns for small tablets */
+    gap: 15px;
+  }
+
+  .grid-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 15px);
+            flex: 0 1 calc(50% - 15px); /* Two items per row */
+  }
+
+  .intro-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /* Stack elements */
+  }
+
+  .intro-container__avatar {
+    max-width: 50%; /* Resize avatar */
+  }
+
+  .intro-container__introduction h1 {
+    font-size: 2rem;
+  }
+
+  .contact-form {
+    width: 80%;
+  }
+}
+
+/* 💻 Tablets & Small Laptops (751px - 1024px) */
+@media (min-width: 751px) and (max-width: 1024px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+  }
+
+  .grid-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(33.33% - 15px);
+            flex: 0 1 calc(33.33% - 15px);
+  }
+
+  .intro-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; /* Switch back to row layout */
+  }
+
+  .intro-container__avatar {
+    max-width: 40%;
+  }
+
+  .intro-container__introduction h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* 🖥️ Large Screens (1025px and up) */
+@media (min-width: 1025px) {
+  .grid {
+    max-width: 1200px;
+  }
+
+  .intro-container__introduction h1 {
+    font-size: 3.5rem;
+  }
+
+  .contact-form {
+    max-width: 600px;
+  }
+}
+
+/* 🌍 Mobile Devices (Up to 500px) */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1rem;  /* Reduce heading size */
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: horizontal;
+            flex-direction: horizontal; /* Stack links vertically */
+    text-align: center;
+    gap: 5px;
+  }
+
+  nav ul li a {
+    font-size: 0.875rem; /* Smaller font size */
+    padding: 8px 8px;
+  }
+
+  .typewriter-container {
+    font-size: 1rem;
+  }
+
+  .intro-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-container__avatar {
+    max-width: 70%;
+    margin-right: 0;
+  }
+}
+
+/* 📏 Small Tablets (501px - 750px) */
+@media (min-width: 501px) and (max-width: 750px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  .typewriter-container {
+    font-size: 1.5rem;
+  }
+
+  .intro-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .intro-container__avatar {
+    max-width: 50%;
+  }
+}
+
+/* 💻 Tablets & Small Laptops (751px - 1024px) */
+@media (min-width: 751px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .typewriter-container {
+    font-size: 2rem;
+  }
+
+  .intro-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .intro-container__avatar {
+    max-width: 40%;
+  }
+}
+
+/* 🖥️ Large Screens (1025px and up) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .typewriter-container {
+    font-size: 3.5rem;
+  }
+}
+
+/* Animation sun */
+
+#about-picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0% 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-picture-toronto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0% 10%;
+}
+
+.sun {
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: color-change;
+          animation-name: color-change;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #fcffad;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+/* Animation cloud */
+
+.cloud-front {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-name: cloud-move;
+          animation-name: cloud-move;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
+
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
+  }
+
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
+  }
+}
